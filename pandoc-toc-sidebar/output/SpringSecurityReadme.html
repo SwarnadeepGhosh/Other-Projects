@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="generator" content="pandoc">
+    <meta name="description" content="">
+
+    <title>README</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://mushiyo.github.io/pandoc-toc-sidebar/css/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">.sidebar ul{padding-left: 10px;}</style>
+    <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Pandoc-toc-sidebar</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">doc1</a></li>
+            <li><a href="#">doc2</a></li>
+            <li><a href="#">doc3</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
+          <!--<ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+          </ul>-->
+          <ul>
+          <li><a href="#spring-security-basics---java-brains"
+          id="toc-spring-security-basics---java-brains"><span>Spring
+          Security Basics - Java Brains</span></a>
+          <ul>
+          <li><a href="#introduction"
+          id="toc-introduction">Introduction</a></li>
+          <li><a href="#configure-authentication"
+          id="toc-configure-authentication">Configure
+          Authentication</a></li>
+          <li><a href="#configure-authorization"
+          id="toc-configure-authorization">Configure
+          Authorization</a></li>
+          <li><a href="#jdbc-authentication-with-spring-security"
+          id="toc-jdbc-authentication-with-spring-security">JDBC
+          authentication with Spring Security</a></li>
+          <li><a href="#jpa-authentication-with-spring-security"
+          id="toc-jpa-authentication-with-spring-security">JPA
+          authentication with Spring Security</a></li>
+          <li><a href="#ldap-spring-security"
+          id="toc-ldap-spring-security">LDAP + Spring Security</a></li>
+          <li><a href="#jwt-authorization"
+          id="toc-jwt-authorization">JWT Authorization</a></li>
+          <li><a href="#jwt-spring-security"
+          id="toc-jwt-spring-security">JWT + Spring Security</a></li>
+          <li><a href="#oauth-spring-security"
+          id="toc-oauth-spring-security">OAuth + Spring
+          Security</a></li>
+          </ul></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        
+<h1 id="spring-security-basics---java-brains"><a
+href="https://www.youtube.com/playlist?list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE">Spring
+Security Basics - Java Brains</a></h1>
+<h2 id="introduction">Introduction</h2>
+<p>Spring Security is a framework which provides various security
+features like: authentication, authorization to create secure Java
+Enterprise Applications. It overcomes all the problems that come during
+creating non spring security applications and manage new server
+environment for the application.</p>
+<p>This framework targets two major areas of application are
+authentication and authorization. Authentication is the process of
+knowing and identifying the user that wants to access.</p>
+<p><strong>Authentication</strong> is the process of knowing and
+identifying the user that wants to access.</p>
+<p><strong>Authorization</strong> is the process to allow authority to
+perform actions in the application.</p>
+<p>We can apply authorization to authorize web request, methods and
+access to individual domain.</p>
+<p>Technologies that support Spring Security Integration</p>
+<p>Spring Security framework supports wide range of authentication
+models. These models either provided by third parties or framework
+itself. Spring Security supports integration with all of these
+technologies.</p>
+<ul>
+<li>HTTP BASIC authentication headers</li>
+<li>HTTP Digest authentication headers</li>
+<li>HTTP X.509 client certificate exchange</li>
+<li>LDAP (Lighweight Directory Access Protocol)</li>
+<li>Form-based authentication</li>
+<li>OpenID authentication</li>
+<li>Automatic remember-me authentication</li>
+<li>Kerberos</li>
+<li>JOSSO (Java Open Source Single Sign-On)</li>
+<li>AppFuse</li>
+<li>AndroMDA</li>
+<li>Mule ESB</li>
+<li>DWR(Direct Web Request)</li>
+</ul>
+<p>The beauty of this framework is its flexible authentication nature to
+integrate with any software solution. Sometimes, developers want to
+integrate it with a legacy system that does not follow any security
+standard, there Spring Security works nicely.</p>
+<h5 id="what-spring-security-can-do"><strong>What Spring Security can do
+?</strong></h5>
+<ul>
+<li><p>Username / Password authentication</p></li>
+<li><p>SSO / Octa / LDAP</p></li>
+<li><p>App Lvel Authorization</p></li>
+<li><p>Intra App Authorization like Oauth</p></li>
+<li><p>Microservice Security (using tokens, JWT )</p></li>
+<li><p>Method Level Security</p></li>
+</ul>
+<h5 id="spring-security-concepts">5 Spring Security Concepts</h5>
+<ul>
+<li>Authentication - Who are you ? (Password, Pin, OTP, Secret
+Question)</li>
+<li>Authorization - Can the user do this ? (Yes / No)</li>
+<li>Principle - Currently Logged in User</li>
+<li>Granted Authority - Application is only allow / authorize the user
+if user is granted to do so. Authority are fine grained.</li>
+<li>Roles - Group of authorities that assign to new user, avoiding
+tedious task to assign authority individually to everyone. Roles are
+Coarse-grained (Grouped)</li>
+</ul>
+<h5 id="adding-spring-security">Adding Spring Security</h5>
+<p>Created a project from Spring Initializr using this link :</p>
+<p>https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=2.6.6&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.swarna&amp;artifactId=SpringSecurityDemo&amp;name=SpringSecurityDemo&amp;description=Spring%20Security%20Demo%20project%20for%20Spring%20Boot&amp;packageName=com.swarna.SpringSecurityDemo&amp;dependencies=web,security</p>
+<p>Dependencies :</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>spring-boot-starter-web</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>spring-boot-starter-security</span></code></pre></div>
+<p>Just add a Controller
+<strong><em>HomeController.java</em></strong></p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="at">@RestController</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> HomeController <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">@GetMapping</span><span class="op">(</span><span class="st">&quot;/&quot;</span><span class="op">)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">home</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&quot;Hello Spring Security&quot;</span><span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Now without configuring anything. lets start this app.</p>
+<pre class="http"><code>Going to -&gt; http://localhost:8080/
+Will navigate to -&gt; http://localhost:8080/login</code></pre>
+<h5 id="spring-security-default-behaviour">Spring Security Default
+Behaviour</h5>
+<ul>
+<li><p>Adds Mandatory authentication for URLs except error
+page.</p></li>
+<li><p>Adds Login Form</p></li>
+<li><p>Handles Login Error</p></li>
+<li><p>Creates a User with username= “user” and sets a default
+password</p>
+<pre><code>Username : user
+Password : check in log &quot;Using generated security password: 6892a94b-98aa-40ab-b74e-5daa5690e62b&quot;</code></pre></li>
+<li><p>To change default username , password, if we declare below in
+<strong><em>application.properties</em></strong>, then Spring Security
+won’t create new user for the same.</p></li>
+</ul>
+<pre class="properties"><code>spring.security.user.name=foo
+spring.security.user.password=foo
+#Now we wont find this message in log : &quot;Using generated security password:...&quot;</code></pre>
+<p>Now we can login using user.name=foo , password=foo</p>
+<h2 id="configure-authentication">Configure Authentication</h2>
+<h5 id="setup-inmemory-authenticationmanagerbuilder">Setup InMemory
+AuthenticationManagerBuilder</h5>
+<p>We will use <strong>AuthenticationManagerBuilder</strong> to
+configure what the authentication should actually do.</p>
+<p>Step 1 : Get hold of <strong>AuthenticationManagerBuilder</strong>
+with properties- username, password, role. We will extend
+<strong>WebSecurityConfigurerAdapter</strong>.</p>
+<p>Step 2 : We will override
+<strong>configure(AuthenticationManagerBuilder)</strong> method which
+pass AuthenticationManagerBuilder.</p>
+<p>Step 3 : Set the Configurations in it. For eg, user tell that he
+needs inMemoryAuthentication. So we will configure like that only.</p>
+<h5
+id="configureauthenticationmanagerbuilder">configure(AuthenticationManagerBuilder)</h5>
+<p><strong><em>SecurityConfiguration.java</em></strong></p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">config</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">authentication</span><span class="op">.</span><span class="im">builders</span><span class="op">.</span><span class="im">AuthenticationManagerBuilder</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">config</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">configuration</span><span class="op">.</span><span class="im">EnableWebSecurity</span><span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">config</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">configuration</span><span class="op">.</span><span class="im">WebSecurityConfigurerAdapter</span><span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="at">@EnableWebSecurity</span> <span class="co">// Telling Spring</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SecurityConfiguration <span class="kw">extends</span> WebSecurityConfigurerAdapter <span class="op">{</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">configure</span><span class="op">(</span>AuthenticationManagerBuilder auth<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        auth<span class="op">.</span><span class="fu">inMemoryAuthentication</span><span class="op">()</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">withUser</span><span class="op">(</span><span class="st">&quot;newuser&quot;</span><span class="op">)</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">password</span><span class="op">(</span><span class="st">&quot;pass&quot;</span><span class="op">)</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">roles</span><span class="op">(</span><span class="st">&quot;USER&quot;</span><span class="op">);</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>The <code>@EnableWebSecurity</code> is a marker annotation. It allows
+Spring to find (it’s a <code>@Configuration</code> and, therefore,
+<code>@Component</code>) and automatically apply the class to the global
+<code>WebSecurity</code>.</p>
+<p>Also we need to comment out username and password from
+<strong><em>application.properties</em></strong></p>
+<pre class="properties"><code>#spring.security.user.name=foo
+#spring.security.user.password=foo</code></pre>
+<h5 id="how-to-set-password-encoder">How to Set Password Encoder</h5>
+<p>Just expose a <span class="citation" data-cites="Bean">@Bean</span>
+of type PasswordEncoder in
+<strong><em>SecurityConfiguration.java</em></strong></p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SecurityConfiguration <span class="kw">extends</span> WebSecurityConfigurerAdapter <span class="op">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">...</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Bean</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> PasswordEncoder <span class="fu">getPasswordEncoder</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> NoOpPasswordEncoder<span class="op">.</span><span class="fu">getInstance</span><span class="op">();</span> <span class="co">//NoOpPasswordEncoder is telling spring to ignore password encoding.</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="configure-authorization">Configure Authorization</h2>
+<p>We want diffrent API having diffrent access requirement.</p>
+<table>
+<thead>
+<tr class="header">
+<th>API</th>
+<th>Roles allows access to it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>/</td>
+<td>All (unauthenticated)</td>
+</tr>
+<tr class="even">
+<td>/user</td>
+<td>USER and ADMIN roles</td>
+</tr>
+<tr class="odd">
+<td>/admin</td>
+<td>ADMIN</td>
+</tr>
+</tbody>
+</table>
+<h5 id="configurehttpsecurity">configure(HttpSecurity)</h5>
+<p>For Authorization, we will use We will override
+<strong>configure(HttpSecurity)</strong> , which will pass HttpSecurity
+to hold logged in user details.</p>
+<p><strong><em>SecurityConfiguration.java</em></strong></p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SecurityConfiguration <span class="kw">extends</span> WebSecurityConfigurerAdapter <span class="op">{</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">...</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Authorization</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">configure</span><span class="op">(</span>HttpSecurity http<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        http<span class="op">.</span><span class="fu">authorizeRequests</span><span class="op">()</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">antMatchers</span><span class="op">(</span><span class="st">&quot;/admin&quot;</span><span class="op">).</span><span class="fu">hasRole</span><span class="op">(</span><span class="st">&quot;ADMIN&quot;</span><span class="op">)</span> <span class="co">// Most Restrictive should be in Top</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">antMatchers</span><span class="op">(</span><span class="st">&quot;/user&quot;</span><span class="op">).</span><span class="fu">hasAnyRole</span><span class="op">(</span><span class="st">&quot;USER&quot;</span><span class="op">,</span><span class="st">&quot;ADMIN&quot;</span><span class="op">)</span>    <span class="co">// Moderate Restrictive</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">antMatchers</span><span class="op">(</span><span class="st">&quot;/&quot;</span><span class="op">).</span><span class="fu">permitAll</span><span class="op">()</span>           <span class="co">// Least Restrictive should be in Bottom</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">and</span><span class="op">().</span><span class="fu">formLogin</span><span class="op">();</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h5 id="endpoints"><strong>Endpoints </strong></h5>
+<pre class="http"><code>http://localhost:8080 -- Home Link
+
+http://localhost:8080/user -- accessible from USER, ADMIN user
+http://localhost:8080/admin -- Only accessible from ADMIN user
+
+http://localhost:8080/logout -- To Logout</code></pre>
+<h5 id="how-spring-security-authentication-works">How Spring Security
+Authentication works</h5>
+<figure>
+<img src="howSpringSecWorks.png" alt="howSpringSecWorks" />
+<figcaption aria-hidden="true">howSpringSecWorks</figcaption>
+</figure>
+<h2 id="jdbc-authentication-with-spring-security">JDBC authentication
+with Spring Security</h2>
+<p>Spring Initializr link -
+https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=2.6.6&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.swarna&amp;artifactId=SpringSecurityJDBC&amp;name=SpringSecurityJDBC&amp;description=Spring%20Security%20Project%20and%20we%20will%20pick%20username%2Fpassword%20from%20Database%20using%20JDBC%20API&amp;packageName=com.swarna.SpringSecurityJDBC&amp;dependencies=web,security,postgresql,jdbc,h2</p>
+<p>Dependencies</p>
+<pre><code>Spring Web
+Spring Security 
+H2 Driver
+JDBC API</code></pre>
+<h5 id="database-connection">Database Connection</h5>
+<p><strong><em>application.properties</em></strong></p>
+<pre class="properties"><code>############### JPA config ###############
+#update means directly change in db while I run application
+spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.show-sql=true
+spring.jpa.defer-datasource-initialization=true
+
+############### Connecting to Postgres Database ###############
+#spring.datasource.url=jdbc:postgresql://host:port/database
+spring.datasource.url=jdbc:postgresql://free-tier12.aws-ap-south-1.cockroachlabs.cloud:26257/swarna-db-200.testdb
+spring.datasource.username=swarnadeep
+spring.datasource.password=uLYrds69nT_WNO5vEQn9rQ
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+spring.jooq.sql-dialect=postgres
+
+################ Connecting to H2 Database ###############
+#spring.h2.console.path=/h2
+#spring.datasource.url=jdbc:h2:mem:testdb
+#spring.datasource.username=sa
+#spring.datasource.password=password
+#spring.datasource.driver-class-name=org.h2.Driver
+#spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+##spring.datasource.initialization-mode=always
+##spring.sql.init.mode=always
+#spring.h2.console.enabled=true</code></pre>
+<h5 id="controller">Controller</h5>
+<p>HomeController.java</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jdbc</span><span class="op">;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">bind</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">GetMapping</span><span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">bind</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">RestController</span><span class="op">;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="at">@RestController</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> HomeController <span class="op">{</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">@GetMapping</span><span class="op">(</span><span class="st">&quot;/&quot;</span><span class="op">)</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">home</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">(</span><span class="st">&quot;&lt;h1&gt;Hello !! From Spring Security&lt;/h1&gt;&quot;</span><span class="op">);</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">@GetMapping</span><span class="op">(</span><span class="st">&quot;/user&quot;</span><span class="op">)</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">user</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">(</span><span class="st">&quot;&lt;h1&gt;Hello User !! From Spring Security&lt;/h1&gt;&quot;</span><span class="op">);</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">@GetMapping</span><span class="op">(</span><span class="st">&quot;/admin&quot;</span><span class="op">)</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">admin</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">(</span><span class="st">&quot;&lt;h1&gt;Hello admin !! From Spring Security&lt;/h1&gt;&quot;</span><span class="op">);</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h5 id="security-config-jdbc">Security Config JDBC</h5>
+<p>SecurityConfiguration.java</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jdbc</span><span class="op">;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">javax</span><span class="op">.</span><span class="im">sql</span><span class="op">.</span><span class="im">DataSource</span><span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">beans</span><span class="op">.</span><span class="im">factory</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">Autowired</span><span class="op">;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">context</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">Bean</span><span class="op">;</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">config</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">authentication</span><span class="op">.</span><span class="im">builders</span><span class="op">.</span><span class="im">AuthenticationManagerBuilder</span><span class="op">;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">config</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">builders</span><span class="op">.</span><span class="im">HttpSecurity</span><span class="op">;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">config</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">configuration</span><span class="op">.</span><span class="im">EnableWebSecurity</span><span class="op">;</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">config</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">configuration</span><span class="op">.</span><span class="im">WebSecurityConfigurerAdapter</span><span class="op">;</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">core</span><span class="op">.</span><span class="im">userdetails</span><span class="op">.</span><span class="im">User</span><span class="op">;</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">crypto</span><span class="op">.</span><span class="im">password</span><span class="op">.</span><span class="im">NoOpPasswordEncoder</span><span class="op">;</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">crypto</span><span class="op">.</span><span class="im">password</span><span class="op">.</span><span class="im">PasswordEncoder</span><span class="op">;</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="at">@EnableWebSecurity</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SecurityConfiguration <span class="kw">extends</span> WebSecurityConfigurerAdapter <span class="op">{</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Autowired</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">DataSource</span> dataSource<span class="op">;</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Authentication</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">configure</span><span class="op">(</span>AuthenticationManagerBuilder auth<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>      auth<span class="op">.</span><span class="fu">jdbcAuthentication</span><span class="op">().</span><span class="fu">dataSource</span><span class="op">(</span>dataSource<span class="op">)</span> <span class="co">// Spring automatically create data source for h2 db.</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="co">//      .withDefaultSchema() // Spring will create a default schema with below data.</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="co">//      .withUser(User.withUsername(&quot;user&quot;).password(&quot;pass&quot;).roles(&quot;USER&quot;))</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">usersByUsernameQuery</span><span class="op">(</span><span class="st">&quot;SELECT username, password, enabled FROM public.users WHERE username = ?&quot;</span><span class="op">)</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">authoritiesByUsernameQuery</span><span class="op">(</span><span class="st">&quot;SELECT username,authority FROM public.authorities WHERE username = ?&quot;</span><span class="op">);</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Authorization</span></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">configure</span><span class="op">(</span>HttpSecurity http<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>        http<span class="op">.</span><span class="fu">authorizeRequests</span><span class="op">().</span><span class="fu">antMatchers</span><span class="op">(</span><span class="st">&quot;/admin&quot;</span><span class="op">).</span><span class="fu">hasRole</span><span class="op">(</span><span class="st">&quot;ADMIN&quot;</span><span class="op">)</span> <span class="co">// Most Restrictive should be in Top</span></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">antMatchers</span><span class="op">(</span><span class="st">&quot;/user&quot;</span><span class="op">).</span><span class="fu">hasAnyRole</span><span class="op">(</span><span class="st">&quot;USER&quot;</span><span class="op">,</span> <span class="st">&quot;ADMIN&quot;</span><span class="op">)</span> <span class="co">// Moderate Restrictive</span></span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">antMatchers</span><span class="op">(</span><span class="st">&quot;/h2/**&quot;</span><span class="op">).</span><span class="fu">permitAll</span><span class="op">()</span> </span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">antMatchers</span><span class="op">(</span><span class="st">&quot;/&quot;</span><span class="op">).</span><span class="fu">permitAll</span><span class="op">()</span> <span class="co">// Least Restrictive should be in Bottom</span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">and</span><span class="op">().</span><span class="fu">formLogin</span><span class="op">();</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Bean</span></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> PasswordEncoder <span class="fu">getPasswordEncoder</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> NoOpPasswordEncoder<span class="op">.</span><span class="fu">getInstance</span><span class="op">();</span> <span class="co">// NoOpPasswordEncoder is telling spring to ignore encoding.</span></span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h5 id="credentials-and-endpoints">Credentials and Endpoints</h5>
+<p>For User =&gt; username=user, password=pass For Admin =&gt;
+username=admin, password=admin</p>
+<pre class="http"><code>http://localhost:8080 -- Home Link
+http://localhost:8080/user -- accessible from USER, ADMIN user
+http://localhost:8080/admin -- Only accessible from ADMIN user
+http://localhost:8080/logout -- To Logout</code></pre>
+<h2 id="jpa-authentication-with-spring-security">JPA authentication with
+Spring Security</h2>
+<p>We will use PostgreSQL database for this concern.</p>
+<p>Spring Initializr link -
+https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=2.6.6&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.swarna&amp;artifactId=SpringSecurityJPA&amp;name=SpringSecurityJPA&amp;description=Spring%20PA%20authentication%20with%20Spring%20Security%20and%20Postgres&amp;packageName=com.swarna.springSecurity.jpa&amp;dependencies=web,data-jpa,security,postgresql</p>
+<p>Dependencies</p>
+<pre><code>Spring Web
+Spring Security 
+Spring Data JPA 
+PostgreSQL Driver</code></pre>
+<figure>
+<img src="SpringSecurityWithJpa.png" alt="SpringSecurityWithJpa" />
+<figcaption aria-hidden="true">SpringSecurityWithJpa</figcaption>
+</figure>
+<h4 id="authenticating-using-hard-coded-password">Authenticating using
+Hard-Coded password</h4>
+<p><strong><em>SecurityConfiguration.java</em></strong></p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jpa</span><span class="op">;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="at">@EnableWebSecurity</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SecurityConfiguration <span class="kw">extends</span> WebSecurityConfigurerAdapter <span class="op">{</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Autowired</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    UserDetailsService userDetailsService<span class="op">;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Authentication</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">configure</span><span class="op">(</span>AuthenticationManagerBuilder auth<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>        auth<span class="op">.</span><span class="fu">userDetailsService</span><span class="op">(</span>userDetailsService<span class="op">);</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">...</span></span></code></pre></div>
+<p><strong><em>MyUserDetailsService.java</em></strong> - To fetch User
+from DB using Service class</p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jpa</span><span class="op">.</span><span class="im">userDetails</span><span class="op">;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="at">@Service</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MyUserDetailsService <span class="kw">implements</span> UserDetailsService <span class="op">{</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> UserDetails <span class="fu">loadUserByUsername</span><span class="op">(</span><span class="bu">String</span> username<span class="op">)</span> <span class="kw">throws</span> UsernameNotFoundException <span class="op">{</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">new</span> <span class="fu">MyUserDetails</span><span class="op">(</span>username<span class="op">);</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><strong><em>MyUserDetails.java</em></strong></p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jpa</span><span class="op">.</span><span class="im">userDetails</span><span class="op">;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MyUserDetails <span class="kw">implements</span> UserDetails <span class="op">{</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="dt">long</span> serialVersionUID <span class="op">=</span> <span class="dv">1L</span><span class="op">;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> userName<span class="op">;</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">MyUserDetails</span><span class="op">(</span><span class="bu">String</span> userName<span class="op">)</span> <span class="op">{</span> <span class="kw">this</span><span class="op">.</span><span class="fu">userName</span> <span class="op">=</span> userName<span class="op">;}</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">Collection</span><span class="op">&lt;?</span> <span class="kw">extends</span> GrantedAuthority<span class="op">&gt;</span> <span class="fu">getAuthorities</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">Arrays</span><span class="op">.</span><span class="fu">asList</span><span class="op">(</span><span class="kw">new</span> <span class="fu">SimpleGrantedAuthority</span><span class="op">(</span><span class="st">&quot;ROLE_USER&quot;</span><span class="op">));</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getPassword</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> <span class="st">&quot;pass&quot;</span><span class="op">;}</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getUsername</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> userName<span class="op">;}</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isAccountNonExpired</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> <span class="kw">true</span><span class="op">;}</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isAccountNonLocked</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> <span class="kw">true</span><span class="op">;}</span></span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isCredentialsNonExpired</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> <span class="kw">true</span><span class="op">;}</span></span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isEnabled</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> <span class="kw">true</span><span class="op">;}</span></span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Now we can authenticate using any username which is entered by us ,
+and the hardcoded password “pass”, for role ROLE_USER</p>
+<h4 id="authenticating-using-real-database">Authenticating using Real
+database</h4>
+<h5 id="application.properties">application.properties</h5>
+<pre class="properties"><code>############### JPA config ###############
+#update means directly change in db while I run application
+spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+#spring.jpa.defer-datasource-initialization=true #To create table using schema.sql
+spring.sql.init.mode=always
+#spring.datasource.initialization-mode=always #--&gt; Or for Spring Boot before 2.5:
+
+############### Connecting to Postgres Database ###############
+#spring.datasource.url=jdbc:postgresql://host:port/database
+spring.datasource.url=jdbc:postgresql://free-tier12.aws-ap-south-1.cockroachlabs.cloud:26257/swarna-db-200.defaultdb
+spring.datasource.username=swarnadeep
+spring.datasource.password=uLYrds69nT_WNO5vEQn9rQ
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+#spring.jooq.sql-dialect=postgres</code></pre>
+<p><strong><em>SecurityConfiguration.java</em></strong> will be same as
+<a
+href="#authenticating-using-hard-coded-password">SecurityConfiguration.java
+of above</a></p>
+<p><strong>Controller</strong> will be same as <a
+href="#controller">HomeController as above</a></p>
+<h5
+id="implementing-userdetailsservice-and-userdetail-interfaces-of-spring-security">Implementing
+UserDetailsService and UserDetail interfaces of Spring Security</h5>
+<p><strong><em>MyUserDetailsService.java</em></strong> - To fetch User
+from DB using Service class</p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="at">@Service</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MyUserDetailsService <span class="kw">implements</span> UserDetailsService <span class="op">{</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Autowired</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    UserRepository userRepository<span class="op">;</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> UserDetails <span class="fu">loadUserByUsername</span><span class="op">(</span><span class="bu">String</span> userName<span class="op">)</span> <span class="kw">throws</span> UsernameNotFoundException <span class="op">{</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="co">//      return new MyUserDetails(username);</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// We are taking the User object from database and converting it to required format which is MyUserDetails</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>        Optional<span class="op">&lt;</span>User<span class="op">&gt;</span> user <span class="op">=</span> userRepository<span class="op">.</span><span class="fu">findByUserName</span><span class="op">(</span>userName<span class="op">);</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>        user<span class="op">.</span><span class="fu">orElseThrow</span><span class="op">(()</span> <span class="op">-&gt;</span> <span class="kw">new</span> <span class="fu">UsernameNotFoundException</span><span class="op">(</span><span class="st">&quot;Not Found &quot;</span> <span class="op">+</span> userName<span class="op">));</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> user<span class="op">.</span><span class="fu">map</span><span class="op">(</span>MyUserDetails<span class="op">::</span><span class="kw">new</span><span class="op">).</span><span class="fu">get</span><span class="op">();</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code></pre></div>
+<p><strong><em>MyUserDetails.java</em></strong> - To convert User Type
+object which is received from DB to MyUserDetails type, which implements
+class of Spring Security
+(org.springframework.security.core.userdetails.UserDetails)</p>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MyUserDetails <span class="kw">implements</span> UserDetails <span class="op">{</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="dt">long</span> serialVersionUID <span class="op">=</span> <span class="dv">1L</span><span class="op">;</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> userName<span class="op">;</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> password<span class="op">;</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">boolean</span> active<span class="op">;</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">List</span><span class="op">&lt;</span>GrantedAuthority<span class="op">&gt;</span> authorities<span class="op">;</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">MyUserDetails</span><span class="op">(</span>User user<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">userName</span> <span class="op">=</span> user<span class="op">.</span><span class="fu">getUserName</span><span class="op">();</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">password</span> <span class="op">=</span> user<span class="op">.</span><span class="fu">getPassword</span><span class="op">();</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">active</span> <span class="op">=</span> user<span class="op">.</span><span class="fu">isActive</span><span class="op">();</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">authorities</span> <span class="op">=</span> <span class="bu">Arrays</span><span class="op">.</span><span class="fu">stream</span><span class="op">(</span>user<span class="op">.</span><span class="fu">getRoles</span><span class="op">().</span><span class="fu">split</span><span class="op">(</span><span class="st">&quot;,&quot;</span><span class="op">))</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">map</span><span class="op">(</span>SimpleGrantedAuthority<span class="op">::</span><span class="kw">new</span><span class="op">)</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">collect</span><span class="op">(</span>Collectors<span class="op">.</span><span class="fu">toList</span><span class="op">());</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">Collection</span><span class="op">&lt;?</span> <span class="kw">extends</span> GrantedAuthority<span class="op">&gt;</span> <span class="fu">getAuthorities</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> authorities<span class="op">;}</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getPassword</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> password<span class="op">;}</span></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getUsername</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> userName<span class="op">;}</span></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isAccountNonExpired</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> active<span class="op">;}</span></span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isAccountNonLocked</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> <span class="kw">true</span><span class="op">;}</span></span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isCredentialsNonExpired</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> <span class="kw">true</span><span class="op">;}</span></span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">isEnabled</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> <span class="kw">true</span><span class="op">;}</span></span>
+<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h5 id="entity-repository">Entity &amp; Repository</h5>
+<p><strong><em>User.java</em></strong></p>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jpa</span><span class="op">.</span><span class="im">userDetails</span><span class="op">;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="at">@Entity</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="at">@Table</span><span class="op">(</span>name <span class="op">=</span> <span class="st">&quot;user&quot;</span><span class="op">,</span> schema <span class="op">=</span> <span class="st">&quot;security&quot;</span><span class="op">)</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> User <span class="op">{</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Id</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">@SequenceGenerator</span><span class="op">(</span>name <span class="op">=</span> <span class="st">&quot;user_seq&quot;</span><span class="op">,</span>sequenceName <span class="op">=</span> <span class="st">&quot;user_seq&quot;</span><span class="op">,</span>allocationSize <span class="op">=</span> <span class="dv">1</span><span class="op">,</span> schema <span class="op">=</span> <span class="st">&quot;security&quot;</span><span class="op">)</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">@GeneratedValue</span><span class="op">(</span>strategy <span class="op">=</span> GenerationType<span class="op">.</span><span class="fu">SEQUENCE</span><span class="op">,</span> generator <span class="op">=</span> <span class="st">&quot;user_seq&quot;</span><span class="op">)</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">int</span> id<span class="op">;</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> userName<span class="op">;</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> password<span class="op">;</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">boolean</span> active<span class="op">;</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> roles<span class="op">;</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">//******** AUTO GENERATED getters &amp; setters below... *********************</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><strong><em>UserRepository.java</em></strong> - To fetch data from
+database using JPARepository methods.</p>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> UserRepository <span class="kw">extends</span> JpaRepository<span class="op">&lt;</span>User<span class="op">,</span> <span class="bu">Integer</span><span class="op">&gt;{</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    Optional<span class="op">&lt;</span>User<span class="op">&gt;</span> <span class="fu">findByUserName</span><span class="op">(</span><span class="bu">String</span> userName<span class="op">);</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h5 id="data.sql">data.sql</h5>
+<ul>
+<li>To initialize data</li>
+</ul>
+<pre class="postgresql"><code>--INSERT INTO security.USER (id, user_name, password, active, roles) VALUES (security.user_seq.nextval, &#39;admin&#39;, &#39;admin&#39;, true, &#39;ROLE_ADMIN&#39;);
+
+INSERT INTO security.USER (id, user_name, password, active, roles) VALUES (nextval(&#39;security.user_seq&#39;), &#39;admin&#39;, &#39;admin&#39;, true, &#39;ROLE_ADMIN&#39;);
+INSERT INTO security.USER (id, user_name, password, active, roles) VALUES (nextval(&#39;security.user_seq&#39;), &#39;user&#39;, &#39;pass&#39;, true, &#39;ROLE_USER&#39;);</code></pre>
+<p><strong>Credentials and Endpoints</strong> - <a
+href="#credentials-and-endpoints">Credentials and Endpoints as
+above</a></p>
+<h2 id="ldap-spring-security">LDAP + Spring Security</h2>
+<p>LDAP (Lightweight Directory Access Protocol) is a software <a
+href="https://www.techtarget.com/searchnetworking/definition/protocol">protocol</a>
+for enabling anyone to locate data about organizations, individuals and
+other resources such as files and devices in a network. Typically,
+they’re used for storing user-related information required for user
+authentication and authorization. we’ll explore the Spring LDAP APIs to
+authenticate and search for users, as well as to create and modify users
+in the directory server. The same set of APIs can be used for managing
+any other type of entries in LDAP.</p>
+<p>Spring Initializr link
+-https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=2.6.7&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.swarna&amp;artifactId=SpringSecurityLDAP&amp;name=SpringSecurityLDAP&amp;description=LDAP%20authentication%20with%20Spring%20Security&amp;packageName=com.swarna.springSecurity.ldap&amp;dependencies=web,security</p>
+<h5 id="running-ldap-server-locally">Running LDAP server locally</h5>
+<p><strong>Dependencies</strong></p>
+<pre><code>Spring Web
+Spring Security 
+** We will add LDAP dependencies aftrwards</code></pre>
+<p><strong><em>pom.xml</em></strong></p>
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- LDAP local instance running dependencies --&gt;</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dependency</span>&gt;</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">groupId</span>&gt;org.springframework.ldap&lt;/<span class="kw">groupId</span>&gt;</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">artifactId</span>&gt;spring-ldap-core&lt;/<span class="kw">artifactId</span>&gt;</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">dependency</span>&gt;</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dependency</span>&gt;</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">groupId</span>&gt;org.springframework.security&lt;/<span class="kw">groupId</span>&gt;</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">artifactId</span>&gt;spring-security-ldap&lt;/<span class="kw">artifactId</span>&gt;</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">dependency</span>&gt;</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dependency</span>&gt;</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">groupId</span>&gt;com.unboundid&lt;/<span class="kw">groupId</span>&gt;</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">artifactId</span>&gt;unboundid-ldapsdk&lt;/<span class="kw">artifactId</span>&gt;</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">dependency</span>&gt;</span></code></pre></div>
+<p>We are following guide from this link -&gt; <a
+href="https://spring.io/guides/gs/authenticating-ldap/">Authenticating a
+User with LDAP</a></p>
+<p><strong><em>application.properties</em></strong></p>
+<pre class="properties"><code>spring.ldap.embedded.port=8389
+spring.ldap.embedded.ldif=classpath:ldap-data.ldif
+# ldif = LDAP data interchange format
+spring.ldap.embedded.base-dn=dc=springframework,dc=org</code></pre>
+<h5 id="ldap-data.ldif">ldap-data.ldif</h5>
+<p>This is for local testing of LDAP server. LDAP mandatorily requires
+SHA Hashed password. For eg, view example of ben below.</p>
+<pre class="ldif"><code>...
+dn: uid=ben,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Ben Alex
+sn: Alex
+uid: ben
+userPassword: $2a$10$c6bSeWPhg06xB1lvmaWNNe4NROmZiSpYhlocU/98HNr2MhIOiSt36
+
+dn: uid=bob,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Bob Hamilton
+sn: Hamilton
+uid: bob
+userPassword: bobspassword
+...</code></pre>
+<p><strong><em>HomeController.java</em></strong></p>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="at">@RestController</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> HomeController <span class="op">{</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">@GetMapping</span><span class="op">(</span><span class="st">&quot;/&quot;</span><span class="op">)</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">index</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&quot;Home Page&quot;</span><span class="op">;</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h5 id="securityconfiguration.java">SecurityConfiguration.java</h5>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="at">@EnableWebSecurity</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SecurityConfiguration <span class="kw">extends</span> WebSecurityConfigurerAdapter <span class="op">{</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Authentication</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">configure</span><span class="op">(</span>AuthenticationManagerBuilder auth<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>        auth<span class="op">.</span><span class="fu">ldapAuthentication</span><span class="op">()</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">userDnPatterns</span><span class="op">(</span><span class="st">&quot;uid={0},ou=people&quot;</span><span class="op">)</span> <span class="co">// Dn = Distinguish Name</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">groupSearchBase</span><span class="op">(</span><span class="st">&quot;ou=groups&quot;</span><span class="op">)</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">contextSource</span><span class="op">()</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>                 <span class="op">.</span><span class="fu">url</span><span class="op">(</span><span class="st">&quot;ldap://localhost:8389/dc=springframework,dc=org&quot;</span><span class="op">)</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>                 <span class="op">.</span><span class="fu">and</span><span class="op">()</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">passwordCompare</span><span class="op">()</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>                 <span class="op">.</span><span class="fu">passwordEncoder</span><span class="op">(</span><span class="kw">new</span> <span class="fu">BCryptPasswordEncoder</span><span class="op">())</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>                 <span class="op">.</span><span class="fu">passwordAttribute</span><span class="op">(</span><span class="st">&quot;userPassword&quot;</span><span class="op">);</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Authorization</span></span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">configure</span><span class="op">(</span>HttpSecurity http<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>        http<span class="op">.</span><span class="fu">authorizeRequests</span><span class="op">()</span></span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">anyRequest</span><span class="op">().</span><span class="fu">fullyAuthenticated</span><span class="op">()</span></span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">and</span><span class="op">().</span><span class="fu">formLogin</span><span class="op">();</span></span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Bean</span></span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> PasswordEncoder <span class="fu">getPasswordEncoder</span><span class="op">()</span> <span class="op">{</span><span class="cf">return</span> NoOpPasswordEncoder<span class="op">.</span><span class="fu">getInstance</span><span class="op">();</span> <span class="op">}</span></span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Now navigate to http://localhost:8080/ and enter username=ben,
+password=benspassword. Login will successful.</p>
+<h2 id="jwt-authorization">JWT Authorization</h2>
+<h4 id="what-is-json-web-token">What is JSON Web Token?</h4>
+<p>JSON Web Token (JWT) is an open standard (<a
+href="https://tools.ietf.org/html/rfc7519">RFC 7519</a>) that defines a
+compact and self-contained way for securely transmitting information
+between parties as a JSON object. This information can be verified and
+trusted because it is digitally signed. JWTs can be signed using a
+secret (with the <strong>HMAC</strong> algorithm) or a public/private
+key pair using <strong>RSA</strong> or <strong>ECDSA</strong>.</p>
+<p>Although JWTs can be encrypted to also provide secrecy between
+parties, we will focus on <em>signed</em> tokens. Signed tokens can
+verify the <em>integrity</em> of the claims contained within it, while
+encrypted tokens <em>hide</em> those claims from other parties. When
+tokens are signed using public/private key pairs, the signature also
+certifies that only the party holding the private key is the one that
+signed it.</p>
+<h5 id="when-should-you-use-jwt">When should you use JWT?</h5>
+<p>Here are some scenarios where JSON Web Tokens are useful:</p>
+<ul>
+<li><strong>Authorization</strong>: This is the most common scenario for
+using JWT. Once the user is logged in, each subsequent request will
+include the JWT, allowing the user to access routes, services, and
+resources that are permitted with that token. Single Sign On is a
+feature that widely uses JWT nowadays, because of its small overhead and
+its ability to be easily used across different domains.</li>
+<li><strong>Information Exchange</strong>: JSON Web Tokens are a good
+way of securely transmitting information between parties. Because JWTs
+can be signed—for example, using public/private key pairs—you can be
+sure the senders are who they say they are. Additionally, as the
+signature is calculated using the header and the payload, you can also
+verify that the content hasn’t been tampered with.</li>
+</ul>
+<h4 id="jwt-structure">JWT structure</h4>
+<p>In its compact form, JSON Web Tokens consist of three parts separated
+by dots (<code>.</code>), which are:</p>
+<ul>
+<li>Header</li>
+<li>Payload</li>
+<li>Signature</li>
+</ul>
+<p>Therefore, a JWT typically looks like the following.</p>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="er">xxxxx.yyyyy.zzzzz</span></span></code></pre></div>
+<p>Let’s break down the different parts.</p>
+<p><strong>Header</strong></p>
+<p>The header <em>typically</em> consists of two parts: the type of the
+token, which is JWT, and the signing algorithm being used, such as HMAC
+SHA256 or RSA.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;alg&quot;</span><span class="fu">:</span> <span class="st">&quot;HS256&quot;</span><span class="fu">,</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;typ&quot;</span><span class="fu">:</span> <span class="st">&quot;JWT&quot;</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>Then, this JSON is <strong>Base64Url</strong> encoded to form the
+first part of the JWT.</p>
+<p><strong>Payload</strong></p>
+<p>The second part of the token is the payload, which contains the
+claims. Claims are statements about an entity (typically, the user) and
+additional data. There are three types of claims: <em>registered</em>,
+<em>public</em>, and <em>private</em> claims.</p>
+<ul>
+<li><p><a
+href="https://tools.ietf.org/html/rfc7519#section-4.1"><strong>Registered
+claims</strong></a>: These are a set of predefined claims which are not
+mandatory but recommended, to provide a set of useful, interoperable
+claims. Some of them are: <strong>iss</strong> (issuer),
+<strong>exp</strong> (expiration time), <strong>sub</strong> (subject),
+<strong>aud</strong> (audience), and <a
+href="https://tools.ietf.org/html/rfc7519#section-4.1">others</a>.</p>
+<blockquote>
+<p>Notice that the claim names are only three characters long as JWT is
+meant to be compact.</p>
+</blockquote></li>
+<li><p><a
+href="https://tools.ietf.org/html/rfc7519#section-4.2"><strong>Public
+claims</strong></a>: These can be defined at will by those using JWTs.
+But to avoid collisions they should be defined in the <a
+href="https://www.iana.org/assignments/jwt/jwt.xhtml">IANA JSON Web
+Token Registry</a> or be defined as a URI that contains a collision
+resistant namespace.</p></li>
+<li><p><a
+href="https://tools.ietf.org/html/rfc7519#section-4.3"><strong>Private
+claims</strong></a>: These are the custom claims created to share
+information between parties that agree on using them and are neither
+<em>registered</em> or <em>public</em> claims.</p></li>
+</ul>
+<p>An example payload could be:</p>
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;sub&quot;</span><span class="fu">:</span> <span class="st">&quot;1234567890&quot;</span><span class="fu">,</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;John Doe&quot;</span><span class="fu">,</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;admin&quot;</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>The payload is then <strong>Base64Url</strong> encoded to form the
+second part of the JSON Web Token.</p>
+<blockquote>
+<p>Do note that for signed tokens this information, though protected
+against tampering, is readable by anyone. Do not put secret information
+in the payload or header elements of a JWT unless it is encrypted.</p>
+</blockquote>
+<p><strong>Signature</strong></p>
+<p>To create the signature part you have to take the encoded header, the
+encoded payload, a secret, the algorithm specified in the header, and
+sign that.</p>
+<p>For example if you want to use the HMAC SHA256 algorithm, the
+signature will be created in the following way:</p>
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="er">HMACSHA256(</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="er">base64UrlEncode(header)</span> <span class="er">+</span> <span class="er">&quot;.&quot;</span> <span class="er">+</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="er">base64UrlEncode(payload),</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="er">secret)</span></span></code></pre></div>
+<p>The signature is used to verify the message wasn’t changed along the
+way, and, in the case of tokens signed with a private key, it can also
+verify that the sender of the JWT is who it says it is.</p>
+<h4 id="jwt-example">JWT Example</h4>
+<p>The output is three Base64-URL strings separated by dots that can be
+easily passed in HTML and HTTP environments, while being more compact
+when compared to XML-based standards such as SAML.</p>
+<p>The following shows a JWT that has the previous header and payload
+encoded, and it is signed with a secret. <img
+src="https://cdn.auth0.com/content/jwt/encoded-jwt3.png"
+alt="Encoded JWT" /></p>
+<p>If you want to play with JWT and put these concepts into practice,
+you can use <a href="https://jwt.io/#debugger-io">jwt.io Debugger</a> to
+decode, verify, and generate JWTs.</p>
+<figure>
+<img
+src="https://cdn.auth0.com/blog/legacy-app-auth/legacy-app-auth-5.png"
+alt="JWT.io Debugger" />
+<figcaption aria-hidden="true">JWT.io Debugger</figcaption>
+</figure>
+<h2 id="jwt-spring-security">JWT + Spring Security</h2>
+<p>Created a simple Spring Security project :
+https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=2.6.7&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.swarna&amp;artifactId=SpringSecurityJWT&amp;name=SpringSecurityJWT&amp;description=Spring%20Security%20Project%20with%20JWT%20Authentication%20and%20authorisation&amp;packageName=com.swarna.springSecurity.jwt&amp;dependencies=web,security</p>
+<h4 id="existing-spring-security-setup">Existing Spring Security
+Setup</h4>
+<p><strong><em>HelloController.java</em></strong></p>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="at">@RestController</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> HelloController <span class="op">{</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">@RequestMapping</span><span class="op">(</span><span class="st">&quot;/hello&quot;</span><span class="op">)</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">hello</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&quot;Hello Spring Security JWT&quot;</span><span class="op">;</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><strong><em>MyUserDetailsService.java</em></strong> - used to fetch
+user details. Here we’ll hardcode the values.</p>
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="at">@Service</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MyUserDetailsService <span class="kw">implements</span> UserDetailsService <span class="op">{</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> UserDetails <span class="fu">loadUserByUsername</span><span class="op">(</span><span class="bu">String</span> userName<span class="op">)</span> <span class="kw">throws</span> UsernameNotFoundException <span class="op">{</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">new</span> <span class="fu">User</span><span class="op">(</span><span class="st">&quot;user&quot;</span><span class="op">,</span> <span class="st">&quot;pass&quot;</span><span class="op">,</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;());</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h4 id="jwt-configuration">JWT Configuration</h4>
+<p>First need to add these in <strong><em>pom.xml</em></strong></p>
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dependency</span>&gt;</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">groupId</span>&gt;io.jsonwebtoken&lt;/<span class="kw">groupId</span>&gt;</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">artifactId</span>&gt;jjwt&lt;/<span class="kw">artifactId</span>&gt;</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">version</span>&gt;0.9.1&lt;/<span class="kw">version</span>&gt;</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">dependency</span>&gt;</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api --&gt;</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dependency</span>&gt;</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">groupId</span>&gt;javax.xml.bind&lt;/<span class="kw">groupId</span>&gt;</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">artifactId</span>&gt;jaxb-api&lt;/<span class="kw">artifactId</span>&gt;</span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">version</span>&gt;2.3.1&lt;/<span class="kw">version</span>&gt;</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">dependency</span>&gt;</span></code></pre></div>
+<p><strong><em>util/JwtUtil.java</em></strong> - Will be used to create
+and validate token.</p>
+<div class="sourceCode" id="cb39"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jwt</span><span class="op">.</span><span class="im">util</span><span class="op">;</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">io</span><span class="op">.</span><span class="im">jsonwebtoken</span><span class="op">.</span><span class="im">Claims</span><span class="op">;</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">io</span><span class="op">.</span><span class="im">jsonwebtoken</span><span class="op">.</span><span class="im">Jwts</span><span class="op">;</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">io</span><span class="op">.</span><span class="im">jsonwebtoken</span><span class="op">.</span><span class="im">SignatureAlgorithm</span><span class="op">;</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">core</span><span class="op">.</span><span class="im">userdetails</span><span class="op">.</span><span class="im">UserDetails</span><span class="op">;</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">stereotype</span><span class="op">.</span><span class="im">Service</span><span class="op">;</span></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Date</span><span class="op">;</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">HashMap</span><span class="op">;</span></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Map</span><span class="op">;</span></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">function</span><span class="op">.</span><span class="im">Function</span><span class="op">;</span></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a><span class="at">@Service</span></span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> JwtUtil <span class="op">{</span></span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> SECRET_KEY <span class="op">=</span> <span class="st">&quot;secret&quot;</span><span class="op">;</span></span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">extractUsername</span><span class="op">(</span><span class="bu">String</span> token<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="fu">extractClaim</span><span class="op">(</span>token<span class="op">,</span> Claims<span class="op">::</span>getSubject<span class="op">);</span></span>
+<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">Date</span> <span class="fu">extractExpiration</span><span class="op">(</span><span class="bu">String</span> token<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="fu">extractClaim</span><span class="op">(</span>token<span class="op">,</span> Claims<span class="op">::</span>getExpiration<span class="op">);</span></span>
+<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-24"><a href="#cb39-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="op">&lt;</span>T<span class="op">&gt;</span> T <span class="fu">extractClaim</span><span class="op">(</span><span class="bu">String</span> token<span class="op">,</span> Function<span class="op">&lt;</span>Claims<span class="op">,</span> T<span class="op">&gt;</span> claimsResolver<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb39-25"><a href="#cb39-25" aria-hidden="true" tabindex="-1"></a>        <span class="dt">final</span> Claims claims <span class="op">=</span> <span class="fu">extractAllClaims</span><span class="op">(</span>token<span class="op">);</span></span>
+<span id="cb39-26"><a href="#cb39-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> claimsResolver<span class="op">.</span><span class="fu">apply</span><span class="op">(</span>claims<span class="op">);</span></span>
+<span id="cb39-27"><a href="#cb39-27" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb39-28"><a href="#cb39-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-29"><a href="#cb39-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> Claims <span class="fu">extractAllClaims</span><span class="op">(</span><span class="bu">String</span> token<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb39-30"><a href="#cb39-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Jwts<span class="op">.</span><span class="fu">parser</span><span class="op">().</span><span class="fu">setSigningKey</span><span class="op">(</span>SECRET_KEY<span class="op">).</span><span class="fu">parseClaimsJws</span><span class="op">(</span>token<span class="op">).</span><span class="fu">getBody</span><span class="op">();</span></span>
+<span id="cb39-31"><a href="#cb39-31" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb39-32"><a href="#cb39-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-33"><a href="#cb39-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">Boolean</span> <span class="fu">isTokenExpired</span><span class="op">(</span><span class="bu">String</span> token<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb39-34"><a href="#cb39-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="fu">extractExpiration</span><span class="op">(</span>token<span class="op">).</span><span class="fu">before</span><span class="op">(</span><span class="kw">new</span> <span class="bu">Date</span><span class="op">());</span></span>
+<span id="cb39-35"><a href="#cb39-35" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb39-36"><a href="#cb39-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-37"><a href="#cb39-37" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">generateToken</span><span class="op">(</span>UserDetails userDetails<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb39-38"><a href="#cb39-38" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">Object</span><span class="op">&gt;</span> claims <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb39-39"><a href="#cb39-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="fu">createToken</span><span class="op">(</span>claims<span class="op">,</span> userDetails<span class="op">.</span><span class="fu">getUsername</span><span class="op">());</span></span>
+<span id="cb39-40"><a href="#cb39-40" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb39-41"><a href="#cb39-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-42"><a href="#cb39-42" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> <span class="fu">createToken</span><span class="op">(</span><span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">Object</span><span class="op">&gt;</span> claims<span class="op">,</span> <span class="bu">String</span> subject<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb39-43"><a href="#cb39-43" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Jwts<span class="op">.</span><span class="fu">builder</span><span class="op">().</span><span class="fu">setClaims</span><span class="op">(</span>claims<span class="op">).</span><span class="fu">setSubject</span><span class="op">(</span>subject<span class="op">).</span><span class="fu">setIssuedAt</span><span class="op">(</span><span class="kw">new</span> <span class="bu">Date</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">()))</span></span>
+<span id="cb39-44"><a href="#cb39-44" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">setExpiration</span><span class="op">(</span><span class="kw">new</span> <span class="bu">Date</span><span class="op">(</span><span class="bu">System</span><span class="op">.</span><span class="fu">currentTimeMillis</span><span class="op">()</span> <span class="op">+</span> <span class="dv">1000</span> <span class="op">*</span> <span class="dv">60</span> <span class="op">*</span> <span class="dv">60</span> <span class="op">*</span> <span class="dv">10</span><span class="op">))</span></span>
+<span id="cb39-45"><a href="#cb39-45" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">signWith</span><span class="op">(</span>SignatureAlgorithm<span class="op">.</span><span class="fu">HS256</span><span class="op">,</span> SECRET_KEY<span class="op">).</span><span class="fu">compact</span><span class="op">();</span></span>
+<span id="cb39-46"><a href="#cb39-46" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb39-47"><a href="#cb39-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-48"><a href="#cb39-48" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">Boolean</span> <span class="fu">validateToken</span><span class="op">(</span><span class="bu">String</span> token<span class="op">,</span> UserDetails userDetails<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb39-49"><a href="#cb39-49" aria-hidden="true" tabindex="-1"></a>        <span class="dt">final</span> <span class="bu">String</span> username <span class="op">=</span> <span class="fu">extractUsername</span><span class="op">(</span>token<span class="op">);</span></span>
+<span id="cb39-50"><a href="#cb39-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">(</span>username<span class="op">.</span><span class="fu">equals</span><span class="op">(</span>userDetails<span class="op">.</span><span class="fu">getUsername</span><span class="op">())</span> <span class="op">&amp;&amp;</span> <span class="op">!</span><span class="fu">isTokenExpired</span><span class="op">(</span>token<span class="op">));</span></span>
+<span id="cb39-51"><a href="#cb39-51" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb39-52"><a href="#cb39-52" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h5 id="step-1-authenticate-api-endpoint">Step 1 : /authenticate API
+endpoint</h5>
+<ul>
+<li>Accepts userId, Password</li>
+<li>Returns JWT as response</li>
+</ul>
+<p><strong><em>models/AuthenticationRequest.java</em></strong></p>
+<div class="sourceCode" id="cb40"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jwt</span><span class="op">.</span><span class="im">models</span><span class="op">;</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">io</span><span class="op">.</span><span class="im">Serializable</span><span class="op">;</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> AuthenticationRequest <span class="kw">implements</span> <span class="bu">Serializable</span> <span class="op">{</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> username<span class="op">;</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> password<span class="op">;</span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getUsername</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> username<span class="op">;</span></span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">setUsername</span><span class="op">(</span><span class="bu">String</span> username<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">username</span> <span class="op">=</span> username<span class="op">;</span></span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getPassword</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> password<span class="op">;</span></span>
+<span id="cb40-17"><a href="#cb40-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb40-18"><a href="#cb40-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">setPassword</span><span class="op">(</span><span class="bu">String</span> password<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb40-19"><a href="#cb40-19" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">password</span> <span class="op">=</span> password<span class="op">;</span></span>
+<span id="cb40-20"><a href="#cb40-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb40-21"><a href="#cb40-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">// need default constructor for JSON Parsing</span></span>
+<span id="cb40-22"><a href="#cb40-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">AuthenticationRequest</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb40-23"><a href="#cb40-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb40-24"><a href="#cb40-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">AuthenticationRequest</span><span class="op">(</span><span class="bu">String</span> username<span class="op">,</span> <span class="bu">String</span> password<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb40-25"><a href="#cb40-25" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">setUsername</span><span class="op">(</span>username<span class="op">);</span></span>
+<span id="cb40-26"><a href="#cb40-26" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">setPassword</span><span class="op">(</span>password<span class="op">);</span></span>
+<span id="cb40-27"><a href="#cb40-27" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb40-28"><a href="#cb40-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><strong><em>models/AuthenticationResponse.java</em></strong></p>
+<div class="sourceCode" id="cb41"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jwt</span><span class="op">.</span><span class="im">models</span><span class="op">;</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">io</span><span class="op">.</span><span class="im">Serializable</span><span class="op">;</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> AuthenticationResponse <span class="kw">implements</span> <span class="bu">Serializable</span> <span class="op">{</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> <span class="bu">String</span> jwt<span class="op">;</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">AuthenticationResponse</span><span class="op">(</span><span class="bu">String</span> jwt<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">jwt</span> <span class="op">=</span> jwt<span class="op">;</span></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">getJwt</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> jwt<span class="op">;</span></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><strong><em>SecurityConfiguration.java</em></strong> - Now we will
+configure security parameters for spring security.</p>
+<div class="sourceCode" id="cb42"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="at">@EnableWebSecurity</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SecurityConfiguration <span class="kw">extends</span> WebSecurityConfigurerAdapter <span class="op">{</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Autowired</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> UserDetailsService myUserDetailsService<span class="op">;</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Authentication</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">configure</span><span class="op">(</span>AuthenticationManagerBuilder auth<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>        auth<span class="op">.</span><span class="fu">userDetailsService</span><span class="op">(</span>myUserDetailsService<span class="op">);</span></span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Authorization - Disable default spring secutity for /authenticate and all other request will be authenticated</span></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">configure</span><span class="op">(</span>HttpSecurity httpSecurity<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a>        httpSecurity<span class="op">.</span><span class="fu">csrf</span><span class="op">().</span><span class="fu">disable</span><span class="op">()</span></span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a>                <span class="op">.</span><span class="fu">authorizeRequests</span><span class="op">().</span><span class="fu">antMatchers</span><span class="op">(</span><span class="st">&quot;/authenticate&quot;</span><span class="op">).</span><span class="fu">permitAll</span><span class="op">().</span></span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>                        <span class="fu">anyRequest</span><span class="op">().</span><span class="fu">authenticated</span><span class="op">();</span></span>
+<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Bean</span> <span class="co">// To ignore error in newer version of spring</span></span>
+<span id="cb42-22"><a href="#cb42-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> AuthenticationManager <span class="fu">authenticationManagerBean</span><span class="op">()</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb42-23"><a href="#cb42-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">super</span><span class="op">.</span><span class="fu">authenticationManagerBean</span><span class="op">();</span></span>
+<span id="cb42-24"><a href="#cb42-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb42-25"><a href="#cb42-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-26"><a href="#cb42-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Bean</span></span>
+<span id="cb42-27"><a href="#cb42-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> PasswordEncoder <span class="fu">getPasswordEncoder</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb42-28"><a href="#cb42-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> NoOpPasswordEncoder<span class="op">.</span><span class="fu">getInstance</span><span class="op">();</span> <span class="co">// NoOpPasswordEncoder is telling spring to ignore encoding.</span></span>
+<span id="cb42-29"><a href="#cb42-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb42-30"><a href="#cb42-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>So, now we need to prepare /authenticate endpoint which should not
+need spring security default authentication as we will configure jwt on
+it.</p>
+<p><strong><em>HelloController.java</em></strong></p>
+<div class="sourceCode" id="cb43"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jwt</span><span class="op">;</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">beans</span><span class="op">.</span><span class="im">factory</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">Autowired</span><span class="op">;</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">http</span><span class="op">.</span><span class="im">ResponseEntity</span><span class="op">;</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">authentication</span><span class="op">.</span><span class="im">AuthenticationManager</span><span class="op">;</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">authentication</span><span class="op">.</span><span class="im">BadCredentialsException</span><span class="op">;</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">authentication</span><span class="op">.</span><span class="im">UsernamePasswordAuthenticationToken</span><span class="op">;</span></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">core</span><span class="op">.</span><span class="im">userdetails</span><span class="op">.</span><span class="im">UserDetails</span><span class="op">;</span></span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">stereotype</span><span class="op">.</span><span class="im">Controller</span><span class="op">;</span></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">bind</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">PostMapping</span><span class="op">;</span></span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">bind</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">RequestBody</span><span class="op">;</span></span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">bind</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">RequestMapping</span><span class="op">;</span></span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">bind</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">RequestMethod</span><span class="op">;</span></span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">bind</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">RestController</span><span class="op">;</span></span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jwt</span><span class="op">.</span><span class="im">models</span><span class="op">.</span><span class="im">AuthenticationRequest</span><span class="op">;</span></span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jwt</span><span class="op">.</span><span class="im">models</span><span class="op">.</span><span class="im">AuthenticationResponse</span><span class="op">;</span></span>
+<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jwt</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">JwtUtil</span><span class="op">;</span></span>
+<span id="cb43-17"><a href="#cb43-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-18"><a href="#cb43-18" aria-hidden="true" tabindex="-1"></a><span class="at">@RestController</span></span>
+<span id="cb43-19"><a href="#cb43-19" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> HelloController <span class="op">{</span></span>
+<span id="cb43-20"><a href="#cb43-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-21"><a href="#cb43-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Autowired</span></span>
+<span id="cb43-22"><a href="#cb43-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> AuthenticationManager authenticationManager<span class="op">;</span></span>
+<span id="cb43-23"><a href="#cb43-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-24"><a href="#cb43-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Autowired</span></span>
+<span id="cb43-25"><a href="#cb43-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> MyUserDetailsService myUserDetailsService<span class="op">;</span></span>
+<span id="cb43-26"><a href="#cb43-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-27"><a href="#cb43-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Autowired</span></span>
+<span id="cb43-28"><a href="#cb43-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> JwtUtil jwtUtil<span class="op">;</span></span>
+<span id="cb43-29"><a href="#cb43-29" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb43-30"><a href="#cb43-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">@RequestMapping</span><span class="op">(</span><span class="st">&quot;/hello&quot;</span><span class="op">)</span></span>
+<span id="cb43-31"><a href="#cb43-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">String</span> <span class="fu">hello</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb43-32"><a href="#cb43-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&quot;Hello Spring Security JWT&quot;</span><span class="op">;</span></span>
+<span id="cb43-33"><a href="#cb43-33" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb43-34"><a href="#cb43-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-35"><a href="#cb43-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">@PostMapping</span><span class="op">(</span><span class="st">&quot;/authenticate&quot;</span><span class="op">)</span></span>
+<span id="cb43-36"><a href="#cb43-36" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> ResponseEntity<span class="op">&lt;?&gt;</span> <span class="fu">createAuthenticationToken</span><span class="op">(</span><span class="at">@RequestBody</span> AuthenticationRequest authenticationRequest<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb43-37"><a href="#cb43-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-38"><a href="#cb43-38" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Authenticating if incoming Username, password are correct</span></span>
+<span id="cb43-39"><a href="#cb43-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span> <span class="op">{</span></span>
+<span id="cb43-40"><a href="#cb43-40" aria-hidden="true" tabindex="-1"></a>            authenticationManager<span class="op">.</span><span class="fu">authenticate</span><span class="op">(</span><span class="kw">new</span> <span class="fu">UsernamePasswordAuthenticationToken</span><span class="op">(</span></span>
+<span id="cb43-41"><a href="#cb43-41" aria-hidden="true" tabindex="-1"></a>                    authenticationRequest<span class="op">.</span><span class="fu">getUsername</span><span class="op">(),</span> authenticationRequest<span class="op">.</span><span class="fu">getPassword</span><span class="op">()));</span></span>
+<span id="cb43-42"><a href="#cb43-42" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span>BadCredentialsException e<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb43-43"><a href="#cb43-43" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Exception</span><span class="op">(</span><span class="st">&quot;Incorrect username or password&quot;</span><span class="op">,</span> e<span class="op">);</span></span>
+<span id="cb43-44"><a href="#cb43-44" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb43-45"><a href="#cb43-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-46"><a href="#cb43-46" aria-hidden="true" tabindex="-1"></a>        <span class="co">// getting user details by username</span></span>
+<span id="cb43-47"><a href="#cb43-47" aria-hidden="true" tabindex="-1"></a>        <span class="dt">final</span> UserDetails userDetails <span class="op">=</span> myUserDetailsService<span class="op">.</span><span class="fu">loadUserByUsername</span><span class="op">(</span>authenticationRequest<span class="op">.</span><span class="fu">getUsername</span><span class="op">());</span></span>
+<span id="cb43-48"><a href="#cb43-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-49"><a href="#cb43-49" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Generating jwt Token</span></span>
+<span id="cb43-50"><a href="#cb43-50" aria-hidden="true" tabindex="-1"></a>        <span class="dt">final</span> <span class="bu">String</span> jwt <span class="op">=</span> jwtUtil<span class="op">.</span><span class="fu">generateToken</span><span class="op">(</span>userDetails<span class="op">);</span></span>
+<span id="cb43-51"><a href="#cb43-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-52"><a href="#cb43-52" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Returning jwt payload as response</span></span>
+<span id="cb43-53"><a href="#cb43-53" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> ResponseEntity<span class="op">.</span><span class="fu">ok</span><span class="op">(</span><span class="kw">new</span> <span class="fu">AuthenticationResponse</span><span class="op">(</span>jwt<span class="op">));</span></span>
+<span id="cb43-54"><a href="#cb43-54" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb43-55"><a href="#cb43-55" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h5 id="endpoint">Endpoint</h5>
+<div class="sourceCode" id="cb44"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="er">POST</span> <span class="er">:</span> <span class="er">http://localhost:8080/authenticate</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="er">Request</span> <span class="er">Body</span> <span class="er">:</span> </span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;username&quot;</span><span class="fu">:</span> <span class="st">&quot;user&quot;</span><span class="fu">,</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;password&quot;</span><span class="fu">:</span> <span class="st">&quot;pass&quot;</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="er">Response</span></span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;jwt&quot;</span><span class="fu">:</span> <span class="st">&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjUxMTkyNjc1LCJpYXQiOjE2NTExNTY2NzV9.fTedCZB9xMASeNRs5f7hnSMLgK7Fi7SdvG5bgiJGSWQ&quot;</span></span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a><span class="er">This</span> <span class="er">is</span> <span class="er">a</span> <span class="er">jwt</span> <span class="er">token</span> <span class="er">which</span> <span class="er">can</span> <span class="er">be</span> <span class="er">used</span> <span class="er">for</span> <span class="er">authentication</span> <span class="er">for</span> <span class="er">other</span> <span class="er">client</span> <span class="er">APIs.</span></span></code></pre></div>
+<h5 id="step-2--intercept-all-incoming-requests">Step 2- Intercept all
+incoming requests</h5>
+<p>Intercept all incoming requests.</p>
+<ul>
+<li><p>Extract JWT from the header</p></li>
+<li><p>Validate and set in execution context</p></li>
+</ul>
+<p>Target : We should get success in below api, not 403 forbidden</p>
+<figure>
+<img src="ConsumingJWT.png" alt="Consuming JWT" />
+<figcaption aria-hidden="true">Consuming JWT</figcaption>
+</figure>
+<p><strong><em>JwtRequestFilter.java</em></strong> - This will filter
+jwt and authenticate.</p>
+<div class="sourceCode" id="cb45"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">package</span><span class="im"> com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jwt</span><span class="op">.</span><span class="im">filters</span><span class="op">;</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">beans</span><span class="op">.</span><span class="im">factory</span><span class="op">.</span><span class="im">annotation</span><span class="op">.</span><span class="im">Autowired</span><span class="op">;</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">authentication</span><span class="op">.</span><span class="im">UsernamePasswordAuthenticationToken</span><span class="op">;</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">core</span><span class="op">.</span><span class="im">context</span><span class="op">.</span><span class="im">SecurityContextHolder</span><span class="op">;</span></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">core</span><span class="op">.</span><span class="im">userdetails</span><span class="op">.</span><span class="im">UserDetails</span><span class="op">;</span></span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">security</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">authentication</span><span class="op">.</span><span class="im">WebAuthenticationDetailsSource</span><span class="op">;</span></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">stereotype</span><span class="op">.</span><span class="im">Component</span><span class="op">;</span></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">org</span><span class="op">.</span><span class="im">springframework</span><span class="op">.</span><span class="im">web</span><span class="op">.</span><span class="im">filter</span><span class="op">.</span><span class="im">OncePerRequestFilter</span><span class="op">;</span></span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jwt</span><span class="op">.</span><span class="im">MyUserDetailsService</span><span class="op">;</span></span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">com</span><span class="op">.</span><span class="im">swarna</span><span class="op">.</span><span class="im">springSecurity</span><span class="op">.</span><span class="im">jwt</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">JwtUtil</span><span class="op">;</span></span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">javax</span><span class="op">.</span><span class="im">servlet</span><span class="op">.</span><span class="im">FilterChain</span><span class="op">;</span></span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">javax</span><span class="op">.</span><span class="im">servlet</span><span class="op">.</span><span class="im">ServletException</span><span class="op">;</span></span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">javax</span><span class="op">.</span><span class="im">servlet</span><span class="op">.</span><span class="im">http</span><span class="op">.</span><span class="im">HttpServletRequest</span><span class="op">;</span></span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">javax</span><span class="op">.</span><span class="im">servlet</span><span class="op">.</span><span class="im">http</span><span class="op">.</span><span class="im">HttpServletResponse</span><span class="op">;</span></span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">io</span><span class="op">.</span><span class="im">IOException</span><span class="op">;</span></span>
+<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-18"><a href="#cb45-18" aria-hidden="true" tabindex="-1"></a><span class="at">@Component</span></span>
+<span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> JwtRequestFilter <span class="kw">extends</span> OncePerRequestFilter <span class="op">{</span></span>
+<span id="cb45-20"><a href="#cb45-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-21"><a href="#cb45-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Autowired</span></span>
+<span id="cb45-22"><a href="#cb45-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> MyUserDetailsService myUserDetailsService<span class="op">;</span></span>
+<span id="cb45-23"><a href="#cb45-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-24"><a href="#cb45-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Autowired</span></span>
+<span id="cb45-25"><a href="#cb45-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> JwtUtil jwtUtil<span class="op">;</span></span>
+<span id="cb45-26"><a href="#cb45-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-27"><a href="#cb45-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb45-28"><a href="#cb45-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> <span class="dt">void</span> <span class="fu">doFilterInternal</span><span class="op">(</span>HttpServletRequest request<span class="op">,</span> HttpServletResponse response<span class="op">,</span> FilterChain chain<span class="op">)</span></span>
+<span id="cb45-29"><a href="#cb45-29" aria-hidden="true" tabindex="-1"></a>            <span class="kw">throws</span> ServletException<span class="op">,</span> <span class="bu">IOException</span> <span class="op">{</span></span>
+<span id="cb45-30"><a href="#cb45-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-31"><a href="#cb45-31" aria-hidden="true" tabindex="-1"></a>        <span class="dt">final</span> <span class="bu">String</span> authorizationHeader <span class="op">=</span> request<span class="op">.</span><span class="fu">getHeader</span><span class="op">(</span><span class="st">&quot;Authorization&quot;</span><span class="op">);</span></span>
+<span id="cb45-32"><a href="#cb45-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-33"><a href="#cb45-33" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> username <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb45-34"><a href="#cb45-34" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> jwt <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb45-35"><a href="#cb45-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-36"><a href="#cb45-36" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>authorizationHeader <span class="op">!=</span> <span class="kw">null</span> <span class="op">&amp;&amp;</span> authorizationHeader<span class="op">.</span><span class="fu">startsWith</span><span class="op">(</span><span class="st">&quot;Bearer &quot;</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb45-37"><a href="#cb45-37" aria-hidden="true" tabindex="-1"></a>            jwt <span class="op">=</span> authorizationHeader<span class="op">.</span><span class="fu">substring</span><span class="op">(</span><span class="dv">7</span><span class="op">);</span></span>
+<span id="cb45-38"><a href="#cb45-38" aria-hidden="true" tabindex="-1"></a>            username <span class="op">=</span> jwtUtil<span class="op">.</span><span class="fu">extractUsername</span><span class="op">(</span>jwt<span class="op">);</span></span>
+<span id="cb45-39"><a href="#cb45-39" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb45-40"><a href="#cb45-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-41"><a href="#cb45-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>username <span class="op">!=</span> <span class="kw">null</span> <span class="op">&amp;&amp;</span> SecurityContextHolder<span class="op">.</span><span class="fu">getContext</span><span class="op">().</span><span class="fu">getAuthentication</span><span class="op">()</span> <span class="op">==</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb45-42"><a href="#cb45-42" aria-hidden="true" tabindex="-1"></a>            UserDetails userDetails <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">myUserDetailsService</span><span class="op">.</span><span class="fu">loadUserByUsername</span><span class="op">(</span>username<span class="op">);</span></span>
+<span id="cb45-43"><a href="#cb45-43" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>jwtUtil<span class="op">.</span><span class="fu">validateToken</span><span class="op">(</span>jwt<span class="op">,</span> userDetails<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb45-44"><a href="#cb45-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-45"><a href="#cb45-45" aria-hidden="true" tabindex="-1"></a>                UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken <span class="op">=</span> </span>
+<span id="cb45-46"><a href="#cb45-46" aria-hidden="true" tabindex="-1"></a>                        <span class="kw">new</span> <span class="fu">UsernamePasswordAuthenticationToken</span><span class="op">(</span>userDetails<span class="op">,</span> <span class="kw">null</span><span class="op">,</span> userDetails<span class="op">.</span><span class="fu">getAuthorities</span><span class="op">());</span></span>
+<span id="cb45-47"><a href="#cb45-47" aria-hidden="true" tabindex="-1"></a>                usernamePasswordAuthenticationToken</span>
+<span id="cb45-48"><a href="#cb45-48" aria-hidden="true" tabindex="-1"></a>                        <span class="op">.</span><span class="fu">setDetails</span><span class="op">(</span><span class="kw">new</span> <span class="fu">WebAuthenticationDetailsSource</span><span class="op">().</span><span class="fu">buildDetails</span><span class="op">(</span>request<span class="op">));</span></span>
+<span id="cb45-49"><a href="#cb45-49" aria-hidden="true" tabindex="-1"></a>                SecurityContextHolder<span class="op">.</span><span class="fu">getContext</span><span class="op">().</span><span class="fu">setAuthentication</span><span class="op">(</span>usernamePasswordAuthenticationToken<span class="op">);</span></span>
+<span id="cb45-50"><a href="#cb45-50" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb45-51"><a href="#cb45-51" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb45-52"><a href="#cb45-52" aria-hidden="true" tabindex="-1"></a>        chain<span class="op">.</span><span class="fu">doFilter</span><span class="op">(</span>request<span class="op">,</span> response<span class="op">);</span></span>
+<span id="cb45-53"><a href="#cb45-53" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb45-54"><a href="#cb45-54" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><strong><em>SecurityConfiguration.java</em></strong></p>
+<div class="sourceCode" id="cb46"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="kw">...</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="at">@Override</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="kw">protected</span> <span class="dt">void</span> <span class="fu">configure</span><span class="op">(</span>HttpSecurity httpSecurity<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>    httpSecurity<span class="op">.</span><span class="fu">csrf</span><span class="op">().</span><span class="fu">disable</span><span class="op">().</span><span class="fu">authorizeRequests</span><span class="op">().</span><span class="fu">antMatchers</span><span class="op">(</span><span class="st">&quot;/authenticate&quot;</span><span class="op">).</span><span class="fu">permitAll</span><span class="op">().</span><span class="fu">anyRequest</span><span class="op">()</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">authenticated</span><span class="op">().</span><span class="fu">and</span><span class="op">().</span><span class="fu">exceptionHandling</span><span class="op">().</span><span class="fu">and</span><span class="op">().</span><span class="fu">sessionManagement</span><span class="op">()</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">sessionCreationPolicy</span><span class="op">(</span>SessionCreationPolicy<span class="op">.</span><span class="fu">STATELESS</span><span class="op">);</span></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Above line is creating Spring not to create a session.</span></span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">// telling Spring to run jwtRequestFilter before default UsernamePasswordAuthenticationFilter</span></span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>    httpSecurity<span class="op">.</span><span class="fu">addFilterBefore</span><span class="op">(</span>jwtRequestFilter<span class="op">,</span> UsernamePasswordAuthenticationFilter<span class="op">.</span><span class="fu">class</span><span class="op">);</span></span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a><span class="kw">...</span></span></code></pre></div>
+<h5 id="endpoint-1">Endpoint</h5>
+<pre class="http"><code>GET : http://localhost:8080/hello
+
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjUxMTkyNjc1LCJpYXQiOjE2NTExNTY2NzV9.fTedCZB9xMASeNRs5f7hnSMLgK7Fi7SdvG5bgiJGSWQ
+
+Output
+Hello Spring Security JWT</code></pre>
+<h2 id="oauth-spring-security">OAuth + Spring Security</h2>
+<p><a href="https://oauth.net/2/">OAuth 2</a> is an authorization
+framework that enables applications — such as Facebook, GitHub, and
+DigitalOcean — to obtain limited access to user accounts on an HTTP
+service. It works by delegating user authentication to the service that
+hosts a user account and authorizing third-party applications to access
+that user account. OAuth 2 provides authorization flows for web and
+desktop applications, as well as mobile devices.</p>
+<h5 id="oauth-roles">OAuth Roles</h5>
+<p>OAuth defines four roles:</p>
+<ul>
+<li><strong>Resource Owner</strong>: The resource owner is the
+<em>user</em> who authorizes an <em>application</em> to access their
+account. The application’s access to the user’s account is limited to
+the scope of the authorization granted (e.g. read or write access)</li>
+<li><strong>Client</strong>: The client is the <em>application</em> that
+wants to access the <em>user</em>’s account. Before it may do so, it
+must be authorized by the user, and the authorization must be validated
+by the API.</li>
+<li><strong>Resource Server</strong>: The resource server hosts the
+protected user accounts.</li>
+<li><strong>Authorization Server</strong>: The authorization server
+verifies the identity of the <em>user</em> then issues access tokens to
+the <em>application</em>.</li>
+</ul>
+<p>From an application developer’s point of view, a service’s API
+fulfills both the resource and authorization server roles. We will refer
+to both of these roles combined, as the <em>Service</em> or <em>API</em>
+role.</p>
+<h5 id="abstract-protocol-flow">Abstract Protocol Flow</h5>
+<p>Now that you have an idea of what the OAuth roles are, let’s look at
+a diagram of how they generally interact with each other:</p>
+<figure>
+<img
+src="https://assets.digitalocean.com/articles/oauth/abstract_flow.png"
+alt="Abstract Protocol Flow" />
+<figcaption aria-hidden="true">Abstract Protocol Flow</figcaption>
+</figure>
+<p>Here is a more detailed explanation of the steps in the diagram:</p>
+<ol type="1">
+<li>The <em>application</em> requests authorization to access service
+resources from the <em>user</em></li>
+<li>If the <em>user</em> authorized the request, the
+<em>application</em> receives an authorization grant</li>
+<li>The <em>application</em> requests an access token from the
+<em>authorization server</em> (API) by presenting authentication of its
+own identity, and the authorization grant</li>
+<li>If the application identity is authenticated and the authorization
+grant is valid, the <em>authorization server</em> (API) issues an access
+token to the application. Authorization is complete.</li>
+<li>The <em>application</em> requests the resource from the <em>resource
+server</em> (API) and presents the access token for authentication</li>
+<li>If the access token is valid, the <em>resource server</em> (API)
+serves the resource to the <em>application</em></li>
+</ol>
+<p>The actual flow of this process will differ depending on the
+authorization grant type in use, but this is the general idea. We will
+explore different grant types in a later section.</p>
+<p><strong>Application Registration</strong></p>
+<p>Before using OAuth with your application, you must register your
+application with the service. This is done through a registration form
+in the <strong>developer</strong> or <strong>API</strong> portion of the
+service’s website, where you will provide the following information (and
+probably details about your application):</p>
+<ul>
+<li>Application Name</li>
+<li>Application Website</li>
+<li>Redirect URI or Callback URL</li>
+</ul>
+<p>The redirect URI is where the service will redirect the user after
+they authorize (or deny) your application, and therefore the part of
+your application that will handle authorization codes or access
+tokens.</p>
+<p><strong>Client ID and Client Secret</strong></p>
+<p>Once your application is registered, the service will issue
+<em>client credentials</em> in the form of a <em>client identifier</em>
+and a <em>client secret</em>. The Client ID is a publicly exposed string
+that is used by the service API to identify the application, and is also
+used to build authorization URLs that are presented to users. The Client
+Secret is used to authenticate the identity of the application to the
+service API when the application requests to access a user’s account,
+and must be kept private between the application and the API.</p>
+<p><strong>Authorization Grant</strong></p>
+<p>In the Abstract Protocol Flow outlined previously, the first four
+steps cover obtaining an authorization grant and access token. The
+authorization grant type depends on the method used by the application
+to request authorization, and the grant types supported by the API.
+OAuth 2 defines three primary grant types, each of which is useful in
+different cases:</p>
+<ul>
+<li><strong>Authorization Code</strong>: used with server-side
+Applications</li>
+<li><strong>Client Credentials</strong>: used with Applications that
+have API access</li>
+<li><strong>Device Code</strong>: used for devices that lack browsers or
+have input limitations</li>
+</ul>
+<figure>
+<img
+src="https://assets.digitalocean.com/articles/oauth/auth_code_flow.png"
+alt="Authorization Code Flow" />
+<figcaption aria-hidden="true">Authorization Code Flow</figcaption>
+</figure>
+<h5 id="initial-setup">Initial Setup</h5>
+<ul>
+<li>Started a Spring Boot Project using Spring Initializr</li>
+</ul>
+<p>https://start.spring.io/#!type=maven-project&amp;language=java&amp;platformVersion=2.6.7&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.swarna&amp;artifactId=SpringSecurityOauth2&amp;name=SpringSecurityOauth2&amp;description=Oauth2%20Demo%20project%20for%20Spring%20Security%20with%20Facebook%20and%20Github%20login%20&amp;packageName=com.swarna.springSecurity.oauth2&amp;dependencies=web,security</p>
+<ul>
+<li>Added Oauth dependency in Spring Security -
+<strong><em>pom.xml</em></strong></li>
+</ul>
+<div class="sourceCode" id="cb48"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dependency</span>&gt;</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">groupId</span>&gt;org.springframework.security.oauth.boot&lt;/<span class="kw">groupId</span>&gt;</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">artifactId</span>&gt;spring-security-oauth2-autoconfigure&lt;/<span class="kw">artifactId</span>&gt;</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">version</span>&gt;2.3.4.RELEASE&lt;/<span class="kw">version</span>&gt;</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">dependency</span>&gt;</span></code></pre></div>
+<ul>
+<li><strong><em>SpringSecurityOauth2Application.java</em></strong></li>
+</ul>
+<div class="sourceCode" id="cb49"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="kw">...</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="at">@EnableOAuth2Sso</span> <span class="co">// Telling to use Oauth2 as authentication</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> SpringSecurityOauth2Application <span class="op">{</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">...</span></span></code></pre></div>
+<h5 id="githhub-authentication">GithHub Authentication</h5>
+<ul>
+<li>Go to https://github.com/settings/developers -&gt; Login -&gt; New
+Oauth2 app -&gt; Give a name and create.</li>
+<li>App Name : [SpringSecurityOauth2-github</li>
+<li>Homepage URL : http://localhost:8080/</li>
+<li>Authorization callback URL : http://localhost:8080/</li>
+<li>There is a Client ID and client secret.</li>
+</ul>
+<p><strong><em>application.yml</em></strong></p>
+<div class="sourceCode" id="cb50"><pre
+class="sourceCode yml"><code class="sourceCode yaml"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">security</span><span class="kw">:</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">oauth2</span><span class="kw">:</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">client</span><span class="kw">:</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">clientId</span><span class="kw">:</span><span class="at"> e220f372ed0886d2e2ad</span></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">clientSecret</span><span class="kw">:</span><span class="at"> 64509a6260e2b2f675bfd66695c6f3dfbe9f21b7</span></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">accessTokenUri</span><span class="kw">:</span><span class="at"> https://github.com/login/oauth/access_token</span></span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">userAuthorizationUri</span><span class="kw">:</span><span class="at"> http://github.com/login/oauth/authorize</span></span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">tokenName</span><span class="kw">:</span><span class="at"> oauth_token</span></span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">authenticationScheme</span><span class="kw">:</span><span class="at"> query</span></span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">clientAuthenticationScheme</span><span class="kw">:</span><span class="at"> form</span></span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">resource</span><span class="kw">:</span></span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">userInfoUri</span><span class="kw">:</span><span class="at"> https://api.github.com/user </span></span></code></pre></div>
+<p>Create a html page that will show on valid login.</p>
+<p><strong><em>static/index.html</em></strong></p>
+<div class="sourceCode" id="cb51"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype </span>html<span class="dt">&gt;</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html</span> <span class="er">lang</span><span class="ot">=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;meta</span> <span class="er">charset</span><span class="ot">=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;meta</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;viewport&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;width=device-width, initial-scale=1&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;title&gt;</span>Spring Security Oauth2<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h2&gt;</span>Welcome in Spring Security Oauth2<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<p><strong>Its done.</strong> Now visit http://localhost:8080/</p>
+<p>You will be redirect to github login page. Upon successful login, it
+will ask to authorize the app with its permissions.</p>
+<p><img src="oauth2-github-login.png" alt="oauth2-github-login.png" style="zoom: 67%;" /></p>
+<p>Upon approve, it will show index.html page. (Welcome in Spring
+Security Oauth2)</p>
+<h5 id="facebook-authentication">Facebook Authentication</h5>
+<ul>
+<li><p>Go to https://developers.facebook.com/ -&gt; Login -&gt; Create a
+new app -&gt; Give a name and create.</p></li>
+<li><p>App Name : SpringSecurityOauth2-fcbk</p></li>
+<li><p>App Link :
+https://developers.facebook.com/apps/311566407794793/add/</p></li>
+<li><p>There is a App id and client secret.</p></li>
+<li><p>For external domains other than localhost, we need to fillup the
+<strong>Valid OAuth Redirect URIs</strong> at
+https://developers.facebook.com/apps/311566407794793/fb-login/settings/</p></li>
+</ul>
+<p><strong><em>application.yml</em></strong></p>
+<div class="sourceCode" id="cb52"><pre
+class="sourceCode yml"><code class="sourceCode yaml"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">security</span><span class="kw">:</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">oauth2</span><span class="kw">:</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">client</span><span class="kw">:</span></span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">clientId</span><span class="kw">:</span><span class="at"> </span><span class="dv">311566407794793</span></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">clientSecret</span><span class="kw">:</span><span class="at"> 550f7ab690b9d4c15060e2c8b93f0ac2</span></span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">accessTokenUri</span><span class="kw">:</span><span class="at"> https://graph.facebook.com/oauth/access_token</span></span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">userAuthorizationUri</span><span class="kw">:</span><span class="at"> https://www.facebook.com/dialog/oauth</span></span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">tokenName</span><span class="kw">:</span><span class="at"> oauth_token</span></span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">authenticationScheme</span><span class="kw">:</span><span class="at"> query</span></span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">clientAuthenticationScheme</span><span class="kw">:</span><span class="at"> form</span></span>
+<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">resource</span><span class="kw">:</span></span>
+<span id="cb52-12"><a href="#cb52-12" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">userInfoUri</span><span class="kw">:</span><span class="at"> https://graph.facebook.com/me </span></span></code></pre></div>
+<p>Create a html page that will show on valid login.</p>
+<p><strong><em>static/index.html</em></strong></p>
+<div class="sourceCode" id="cb53"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype </span>html<span class="dt">&gt;</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html</span> <span class="er">lang</span><span class="ot">=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;meta</span> <span class="er">charset</span><span class="ot">=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;meta</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;viewport&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;width=device-width, initial-scale=1&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;title&gt;</span>Spring Security Oauth2<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h2&gt;</span>Welcome in Spring Security Oauth2<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<p><strong>Its done.</strong> Now visit http://localhost:8080/</p>
+<p>You will be redirect to facebook login page. Upon successful login,
+it will ask to authorize the app with its permissions.</p>
+<p><img src="oauth2-facebook-login.png" alt="oauth2-facebook-login" style="zoom: 67%;" /></p>
+<p>Upon approve, it will show index.html page. (Welcome in Spring
+Security Oauth2)</p>
+<h5 id="references">References</h5>
+<ul>
+<li><p>https://www.callicoder.com/spring-boot-security-oauth2-social-login-part-1/</p></li>
+<li><p>https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2</p></li>
+<li><p>https://spring.io/guides/tutorials/spring-boot-oauth2/</p></li>
+<li><p>https://www.codeusingjava.com/boot/fb</p></li>
+<li><p>https://medium.com/swlh/spring-boot-oauth2-login-with-github-88b178e0c004</p></li>
+<li><p>https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps</p></li>
+</ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+        //document.getElementById('sidebar').getElementsByTagName('ul')[0].className += "nav nav-sidebar";
+        
+        /* ajust the height when click the toc
+           the code is from https://github.com/twbs/bootstrap/issues/1768
+        */
+        var shiftWindow = function() { scrollBy(0, -50) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+        
+        /*add Bootstrap styles to tables*/
+        var tables = document.getElementsByTagName("table");
+        for(var i = 0; i < tables.length; ++i){
+            tables[i].className += "table table-bordered table-hover";
+        }
+    </script>
+  </body>
+</html>

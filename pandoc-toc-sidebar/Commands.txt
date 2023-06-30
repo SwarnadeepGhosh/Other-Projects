@@ -1,0 +1,37 @@
+*** RUN THESE IN GIT-BASH ***
+
+=========== Rule : ===========
+1. pandoc <Source.md> --template /e/My-Projects/Other-Projects/pandoc-toc-sidebar/toc-sidebar.html  --toc -o <Destination.html> --metadata title="<Customized Title>"
+2. Only H1, H2. H3 headings will be marked in Side navigation bar.
+
+=========== Example Command Without Navbar: (Can be run globally) ===========
+pandoc README.md --template /e/My-Projects/Other-Projects/pandoc-toc-sidebar/toc-sidebar.html  --toc -o SpringSecurityReadme1.html --metadata title="Spring Security"
+
+
+-------- Example Command With Navbar: (Can be run globally) --------
+pandoc README.md --template /e/My-Projects/Other-Projects/pandoc-toc-sidebar/toc-sidebar.html  --toc  -B /e/My-Projects/Other-Projects/pandoc-toc-sidebar/nav -o SpringSecurityReadme1.html --metadata title="Spring Security"
+
+
+
+-------- Example Command With Navbar: (needs to run from pandoc-toc-sidebar folder) --------
+pandoc /e/JAVA-Backend/Spring-Boot/Spring-Security/README.md --template toc-sidebar.html --toc -B /e/My-Projects/Other-Projects/pandoc-toc-sidebar/nav -o output/SpringSecurityReadme.html
+
+-------- Example Command Without Navbar: (needs to run from pandoc-toc-sidebar folder) --------
+pandoc /e/JAVA-Backend/Spring-Boot/Spring-Security/README.md --template toc-sidebar.html --toc -o output/SpringSecurityReadme.html
+
+pandoc Testing.md --template /e/My-Projects/Other-Projects/pandoc-toc-sidebar/toc-sidebar.html  --toc -o Testing.html --metadata title="Testing"
+===========================================================================================================
+
+-- WITHOUT NAVBAR
+pandoc Wings1-May-2022-Assessment.md --template /d/My-Projects/Other-Projects/pandoc-toc-sidebar/toc-sidebar.html  --toc -o Wings1-May-2022-Assessment.html --metadata title="Wings1-May-2022-Assessment"
+
+-- Without NAVBAR
+pandoc README.md --template /d/My-Projects/Other-Projects/pandoc-toc-sidebar/toc-sidebar.html  --toc -o DevOps_Tutorial.html --metadata title="DevOps_Tutorial"
+
+
+-- With NAVBAR
+pandoc README.md --template /d/My-Projects/Other-Projects/pandoc-toc-sidebar/toc-sidebar.html  --toc -B /e/My-Projects/Other-Projects/pandoc-toc-sidebar/nav  -o index.html --metadata title="Tutorial Notes"
+
+
+-----------------------------
+
